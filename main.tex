@@ -1,0 +1,74 @@
+\documentclass[]{article}
+\usepackage{float}
+
+
+%opening
+\title{Internal communication interface standards}
+\author{Researchlab Autonomous Shipping (RAS) Delft}
+
+\begin{document}
+
+\maketitle
+ ADD LOGO HERE
+ 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		Date       & Name          & Description \\ \hline
+		2022-08-29 & Bart Boogmans & Creation    \\
+		&               &            
+	\end{tabular}
+	\caption{Revision history of this document}
+\end{table}
+
+Note: This is an early file version. Interfaces described in this document are prone to change. 
+
+
+\section{Namespaces}
+The following identifiers are used for our vessels:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lll}
+		Model    & Description          & Identifier  \\ \hline
+		TitoNeri & Light-blue Tito Neri & RAS\_TN\_LB \\
+		TitoNeri & Dark-blue Tito Neri        & RAS\_TN\_DB \\
+		TitoNeri & Red Tito Neri        & RAS\_TN\_RE \\
+		TitoNeri & Yellow Tito Neri        & RAS\_TN\_YE \\
+		TitoNeri & Purple Tito Neri        & RAS\_TN\_PU \\
+
+		TitoNeri & Green Tito Neri        & RAS\_TN\_GR \\
+		TitoNeri & Orange Tito Neri        & RAS\_TN\_OR \\
+		GreySeabax & The Grey-seabax        & RAS\_GS \\
+		Delfia-1* & Delfia 1       & RAS\_DF\_1 \\
+		Delfia-1* & Delfia 2       & RAS\_DF\_2 \\
+		Delfia-1* & Delfia 3       & RAS\_DF\_3 \\
+		Delfia-1* & Delfia 4       & RAS\_DF\_4 \\
+		Delfia-1* & Delfia 5       & RAS\_DF\_5 
+		
+	\end{tabular}
+\end{table}
+
+\section{ROS topics \& message formats}
+For all topics, describe:
+
+- topic names
+
+- messagetypes
+
+- meaning of parameters (e.g. if float32multiArray which elements mean what?)
+
+- default units
+
+- frame of reference
+
+- notes
+
+- standard variations: (e.g. pose as 3 or 6 DOF.) and how to distinct them, and when we generally use which one. 
+
+
+\section{IP reservation}
+explain local network and vpn server protocols.
+explain how to connect to both. 
+
+\end{document}
