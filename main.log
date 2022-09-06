@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.28)  29 AUG 2022 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.28)  6 SEP 2022 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -31,6 +31,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks15
 \@floatcapt=\box46
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
@@ -45,6 +52,9 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count176
@@ -53,33 +63,33 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count177
-\scratchdimen=\dimen135
+\scratchdimen=\dimen137
 \scratchbox=\box48
 \nofMPsegments=\count178
 \nofMParguments=\count179
-\everyMPshowfont=\toks16
+\everyMPshowfont=\toks17
 \MPscratchCnt=\count180
-\MPscratchDim=\dimen136
+\MPscratchDim=\dimen138
 \MPnumerator=\count181
 \makeMPintoPDFobject=\count182
-\everyMPtoPDFconversion=\toks17
+\everyMPtoPDFconversion=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -90,47 +100,83 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
+(Font)              <12> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
+(Font)              <6> on input line 12.
 <YW_RAS_logo_GreyBackground.png, id=1, 301.125pt x 59.22125pt>
 File: YW_RAS_logo_GreyBackground.png Graphic file (type png)
 <use YW_RAS_logo_GreyBackground.png>
-Package pdftex.def Info: YW_RAS_logo_GreyBackground.png  used on input line 15.
+Package pdftex.def Info: YW_RAS_logo_GreyBackground.png  used on input line 16.
 
 (pdftex.def)             Requested size: 301.12425pt x 59.22108pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 21.
+(Font)              <5> on input line 22.
 
-Overfull \hbox (22.55637pt too wide) in paragraph at lines 21--26
+Overfull \hbox (22.55637pt too wide) in paragraph at lines 22--27
  [][] 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./YW_RAS_logo_GreyBackgrou
-nd.png>] [2] (./main.aux) ) 
-Here is how much of TeX's memory you used:
- 1137 strings out of 483183
- 16543 string characters out of 5966292
- 246336 words of memory out of 5000000
- 16192 multiletter control sequences out of 15000+600000
- 535978 words of font info for 36 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 25i,8n,21p,165b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+nd.png>]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 6
+4.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 64.
 
-Output written on main.pdf (2 pages, 65535 bytes).
+Overfull \hbox (128.46204pt too wide) in paragraph at lines 61--74
+[][] 
+ []
+
+
+Overfull \hbox (92.87048pt too wide) in paragraph at lines 76--78
+\OT1/cmr/m/n/10 for the TitoNeri this refers to $\OML/cmm/m/it/10 u \OT1/cmr/m/
+n/10 = [\OML/cmm/m/it/10 rpm[]PS[]thr; rpm[]SB[]thr; pwm[]bow; alpha[]PS[]azi; 
+alpha[]SB[]azi\OT1/cmr/m/n/10 ]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+<tinyTank1_labeled.jpg, id=12, 1606.0pt x 903.375pt>
+File: tinyTank1_labeled.jpg Graphic file (type jpg)
+<use tinyTank1_labeled.jpg>
+Package pdftex.def Info: tinyTank1_labeled.jpg  used on input line 92.
+(pdftex.def)             Requested size: 491.43787pt x 276.43185pt.
+
+Overfull \hbox (146.43787pt too wide) in paragraph at lines 92--93
+ [][] 
+ []
+
+[2] [3 <./tinyTank1_labeled.jpg>] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 1253 strings out of 483183
+ 18360 string characters out of 5966292
+ 250904 words of memory out of 5000000
+ 16297 multiletter control sequences out of 15000+600000
+ 536285 words of font info for 37 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 30i,13n,25p,299b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr17.pfb>
+Output written on main.pdf (3 pages, 401770 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 38 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

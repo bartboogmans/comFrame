@@ -1,10 +1,11 @@
 \documentclass[]{article}
 \usepackage{float}
-\usepackage{graphics}
+%\usepackage{graphics}
+\usepackage{graphicx}
 
 %opening
 \title{RAS Internal communication interface standards}
-\author{Bart Boogmans, (others; add yourself)}
+\author{Bart Boogmans}
 
 \begin{document}
 
@@ -21,7 +22,7 @@
 	\begin{tabular}{lll}
 		Date       & Name          & Description \\ \hline
 		2022-08-29 & Bart Boogmans & Creation, initial layout, add namepace definitions  \\
-		&               &            
+		2022-09-6	& Bart Boogmans	& Add first coordinate systems \& messageformats      
 	\end{tabular}
 	\caption{Revision history of this document}
 \end{table}
@@ -55,25 +56,45 @@ The following identifiers are used for our vessels:
 \end{table}
 
 \section{ROS topics \& message formats}
-For all topics, describe:
 
-- topic names
+\begin{table}[H]
+	\begin{tabular}{llll}
+		Topicname & Description & Messagetype & Default unit(s) \\ \hline
+		
+		/\textless{}vesselID\textgreater{}/u\_ref & Actuator reference  & Float32MultiArray* & \begin{tabular}[c]{@{}l@{}}shaft velocities: Rpm\\ Azimuth angles: radians\\ pwm signal: normalized{[}-1:1{]}\end{tabular} \\
+		
+		/\textless{}vesselID\textgreater{}/u\_est & Measured actuator state & Float32MultiArray & identical to /\textless{}vesselID\textgreater{}/u\_ref \\
+		
+		OptiRAS/\textless{}vesselID\textgreater{} & Estimated pose & stdmsgs/pose & meters,quaternions \\
+		
+		/\textless{}vesselID\textgreater{}/x\_est & Estimated surface state & type & unit \\
+		name & desc & type & unit \\
+		name & desc & type & unit 
+	\end{tabular}
+\end{table}
 
-- messagetypes
-
-- meaning of parameters (e.g. if float32multiArray which elements mean what?)
-
-- default units
-
-- frame of reference
-
-- notes
+* for the delfia this refers to $[rps\_back,rps\_front,angle\_back,angle\_front]$\\
+for the TitoNeri this refers to $u = [rpm\_PS\_thr,rpm\_SB\_thr,pwm\_bow,alpha\_PS\_azi,alpha\_SB\_azi]$\\
 
 - standard variations: (e.g. pose as 3 or 6 DOF.) and how to distinct them, and when we generally use which one. 
-
 
 \section{IP reservation}
 explain local network and vpn server protocols.
 explain how to connect to both. 
+
+
+\section{Coordinate systems}
+\subsection{Tiny lab tank}
+The coordinate system of the optitrack system on the tiny lab tank is defined as follows:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\paperwidth]{tinyTank1_labeled.jpg}
+	\caption{The tiny tank is about 1.3 by 0.81m}
+\end{figure}
+Note that Z does not point down (as in line with the standard NED definition). Coordinate system transformation can be done afterwards, but this is how you can expect the initial pose-stream on ROS.
+
+\subsection{Small towing tank}
+TBD
 
 \end{document}
