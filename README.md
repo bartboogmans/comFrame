@@ -31,7 +31,7 @@ The table below shows identifiers are used for our vessels. These names are comm
 | Delfia-1*  | Delfia 5             | RAS\_DF\_5  |
 
 ## ROS topics & message formats
-To have modules easily swappable and connectable, the following default messagetypes and namespacing are suggested. 'vesselID' refers to the Identifier of a particular vessel as described in the previous section.
+To have modules easily swappable and connectable, the following default messagetypes and namespacing are suggested. 'vesselID' refers to the Identifier of a particular vessel as described in the [previous section](#namespaces).
 
 Old namespace convention: (pre 2023)
 | Topicname                                  | Description             | Messagetype        | Default unit(s)                                        |
