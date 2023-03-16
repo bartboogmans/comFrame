@@ -6,6 +6,7 @@
 
 These guidelines are aimed to help people get access to RAS systems and encourage alignment of interfaces between projects/modules. Anyone can choose freely to ignore these guidelines as they see fit, but it is preferred to follow this standard enhance component compatibility.
 
+For descriptions of common control setups, [see here](baseStackOverview.md)
 <p align="center">
   <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png"/>
 </p>
@@ -35,19 +36,19 @@ To have modules easily swappable and connectable, the following default messaget
 Old namespace convention: (pre 2023)
 | Topicname                                  | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
-| /vesselID/u_ref  | Reference/desired Actuator state  | std_msgs/Float32MultiArray* | shaft velocities: Rpm       |
+| /vesselID/u_ref  | Reference/desired Actuator state  | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )   |
 | /vesselID/u_est | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
 | OptiRAS/vesselID | Estimated pose          | std_msgs/pose       | meters,quaternions   |
 | /vesselID/geopos_est | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
 | /vesselID/heading_est | Estimated/measured yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 | /vesselID/heading_ref | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
-| /vesselID/telemetry  | microcontroller state / telemetry  | std_msgs/Float32MultiArray* | various  |
+| /vesselID/telemetry  | microcontroller state / telemetry  | std_msgs/Float32MultiArray* | various (see [below](#details-on-particular-topics) )  |
 
 Updated namespaces (we will migrate tho this throughout 2023)
 | Topicname                                 | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
-| /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
-| /vesselID/reference/actuation_prio  |  Override actuation reference, commonly for emergency | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
+| /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )  |
+| /vesselID/reference/actuation_prio  |  Override actuation reference, commonly for emergency | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )   |
 | /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
 | /vesselID/state/poseLocal | Estimated/measured pose w.r.t. local coordinate system    | stdmsgs/pose       | meters,quaternions    |
 | /vesselID/state/posGlobal | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
