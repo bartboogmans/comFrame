@@ -72,6 +72,7 @@ For the Tito Neri the actuation array is defined as
 
 <br>
 For the Tito Neri the telemetry array is defined as:
+
 | Index | Content                   | Unit                                 |
 |-------|---------------------------|--------------------------------------|
 | 0     | dcmotor\_P\_reference     | RPM                                  |
