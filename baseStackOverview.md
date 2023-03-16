@@ -14,8 +14,11 @@ There is not necessarily one module per function. It is possible that:
 - A single module covers a single function.
 - A function is covered by multiple modules.
 
+
 This depends on the design choices and goal of a developer. Modularizing when possible enhances reusability, while doing various computational tasks within a single module can occasionally be simpler to implement.
-We commonly use the Robotic Operating System (ROS) to facilitate communication between various modules. 
+
+### Robotic Operating System
+We commonly use the Robotic Operating System (ROS) to facilitate communication between various modules. This allows various agents to stream (publish) and listen (subscribe) to any datastreams (topics) on the network to fulfull their task. Starting various control processes (nodes) within the network can together communicate and fulfull their tasks to close the feedback control loop. 
 
 ## An example of a simple Tito Neri waypoint following stack
 ### High level system view:
@@ -25,7 +28,7 @@ In this case the connections between the 'vessel system', ' waypoint module' and
 
 
 ### A detailed view on the vessel system
-A detailed view on the devices on the vessel show some more complexity on board of the ship, shedding some light on the various software and hardware components on board. There is a lot more going on, although the main functionality for external users is: actuation reference in, sensor data out.
+A detailed view on the devices on the vessel show some more complexity on board of the ship, shedding some light on the various software and hardware components on board. You can see that there are a variety of devices on board that run several software modules. There is a lot more going on than just a rigid body and some actuators, although the main functionality for external users is relatively simple: actuation reference goes in, sensor data comes out. Other control components can run on any devices on the ROS network. 
 ![base_titoneri_setup drawio (1)](https://user-images.githubusercontent.com/5917472/225702533-7e9da585-7c21-45fe-a4b3-fe410db8400e.png)
 
 ## Other available modules
