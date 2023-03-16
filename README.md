@@ -112,6 +112,6 @@ Note that Z does not point down (as in line with the marine standard NED definit
 ### Flume tank
 ![image](https://user-images.githubusercontent.com/5917472/225601576-15fd108c-e240-41bf-ba62-5503a229fb05.png)
 
-Note that Z does not point down (as in line with the marine standard NED definition). If this is desired, coordinate system transformation can be done by the user.
+Arrows the the figure above denote positive values. Note that Z does not point down (as in line with the marine standard NED definition). If this is desired, coordinate system transformation can be done by the user.
 
 ### Small towing tank
