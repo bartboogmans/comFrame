@@ -28,7 +28,7 @@ The table below shows identifiers are used for our vessels. These names are comm
 ## ROS topics & message formats
 To have modules easily swappable and connectable, the following default messagetypes and namespacing are suggested. 'vesselID' refers to the Identifier of a particular vessel as described in the previous section.
 
-Old namespace convention:
+Old namespace convention: (pre 2023)
 | Topicname                                  | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
 | /vesselID/u_ref  | Reference/desired Actuator state  | std_msgs/Float32MultiArray* | shaft velocities: Rpm       |
@@ -39,7 +39,7 @@ Old namespace convention:
 | /vesselID/heading_ref | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 | /vesselID/telemetry  | microcontroller state / telemetry  | std_msgs/Float32MultiArray* | various  |
 
-Updated namespaces
+Updated namespaces (we will migrate tho this throughout 2023)
 | Topicname                                 | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
 | /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
