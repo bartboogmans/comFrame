@@ -1,10 +1,14 @@
 # Researchlab Autonomous Shipping Delft - Internal standards
-
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png" />
+  <img src="https://user-images.githubusercontent.com/5917472/225625088-a7cb7d74-f594-4aed-bfc7-555cc0f2d2e4.png" />
 </p>
 
+
 These guidelines are aimed to help people get access to RAS systems and encourage alignment of interfaces between projects/modules. Anyone can choose freely to ignore these guidelines as they see fit, but it is preferred to follow this standard enhance component compatibility.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png"/>
+</p>
 
 ## Namespaces 
 The table below shows identifiers are used for our vessels. These names are commonly used when something needs to refer to a specific ship, such as ROS topics. 
@@ -43,6 +47,7 @@ Updated namespaces (we will migrate tho this throughout 2023)
 | Topicname                                 | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
 | /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
+| /vesselID/reference/actuation_prio  |  Override actuation reference, commonly for emergency | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
 | /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
 | /vesselID/state/poseLocal | Estimated/measured pose w.r.t. local coordinate system    | stdmsgs/pose       | meters,quaternions    |
 | /vesselID/state/posGlobal | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
@@ -59,6 +64,7 @@ Delfia-1* actuation array is as follows:
 | 2     | Angle rear azimuth       | Radians |
 | 3     | Angle front azimuth      | Radians |
 <br>
+
 
 For the Tito Neri the actuation array is defined as 
 
