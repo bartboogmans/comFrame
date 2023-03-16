@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png" />
 </p>
 
-Interfaces described in this document are prone to change. 
+These interfaces serve as a main guideline to make people/projects/components interact easier. Adhering to them improves reusability, maintainability and structural integration and collaboration, although this is not obligatory.
 
 ## Namespaces 
 The table below shows identifiers are used for our vessels. These names are commonly used when something needs to refer to a specific ship, such as ROS topics. 
@@ -57,3 +57,16 @@ Actuation of the vessels are defined as follows:
 | Delfia-1* | $[propvel_{1},propvel\_{2},propangle\_{1},propangle\_{2}]$| $rps,rps,radians, radians$|
 | Tito Neri | $[propvel_{aft,ps},propvel\_{aft,sb},proppower\_{bow},propangle\_{aft,ps},propangle\_{aft,sb}]$ | $[rpm,rpm,normalized,radians,radians]$ |
 | Grey Seabax | $[]$ |  $[]$ |
+
+
+## Coordinate systems
+### Tiny lab tank
+The coordinate system of the optitrack system on the tiny lab tank is defined as follows:
+<p align="center">
+  <img src="[https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png](https://user-images.githubusercontent.com/5917472/225597128-5e988305-7c49-4249-9398-7e5f920c1047.jpg)" />
+</p>
+Note that Z does not point down (as in line with the marine standard NED definition). If this is desired, coordinate system transformation can be done by the user.
+
+### Small towing tank
+
+### Flume tank
