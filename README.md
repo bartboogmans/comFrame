@@ -4,7 +4,7 @@
 </p>
 
 
-These guidelines are aimed to help people get access to RAS systems and encourage alignment of interfaces between projects/modules. Anyone can choose freely to ignore these guidelines as they see fit, but it is preferred to follow this standard enhance component compatibility.
+These guidelines are aimed to help people get access to RAS systems and encourage alignment of interfaces between projects/modules. Anyone can choose freely to ignore these guidelines as they see fit, but it is encouraged to follow this standard to enhance component compatibility.
 
 For descriptions of common control setups, [see here](baseStackOverview.md)
 <p align="center">
