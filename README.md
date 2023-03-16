@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png" />
 </p>
 
-Interfaces described in this document are prone to change. Anyone can choose freely to ignore these guidelines as they see fit, but it is preferred to follow this standard to make modules / projects as compatible to one another as possible.
+These guidelines are aimed to help people get access to RAS systems and encourage alignment of interfaces between projects/modules. Anyone can choose freely to ignore these guidelines as they see fit, but it is preferred to follow this standard enhance component compatibility.
 
 ## Namespaces 
 The table below shows identifiers are used for our vessels. These names are commonly used when something needs to refer to a specific ship, such as ROS topics. 
