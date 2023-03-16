@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png" />
 </p>
 
-These interfaces serve as a main guideline to make people/projects/components interact easier. Adhering to them improves reusability, maintainability and structural integration and collaboration, although this is not obligatory.
+Interfaces described in this document are prone to change. Anyone can choose freely to ignore these guidelines as they see fit, but it is preferred to follow this standard to make modules / projects as compatible to one another as possible.
 
 ## Namespaces 
 The table below shows identifiers are used for our vessels. These names are commonly used when something needs to refer to a specific ship, such as ROS topics. 
@@ -37,6 +37,7 @@ Old namespace convention:
 | /vesselID/geopos_est | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
 | /vesselID/heading_est | Estimated/measured yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 | /vesselID/heading_ref | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
+| /vesselID/telemetry  | microcontroller state / telemetry  | std_msgs/Float32MultiArray* | various  |
 
 Updated namespaces
 | Topicname                                 | Description             | Messagetype        | Default unit(s)                                        |
@@ -49,24 +50,67 @@ Updated namespaces
 | /vesselID/state/heading | Estimated/measured yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 | /vesselID/reference/heading | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 
-Actuation of the vessels are defined as follows:
+### Details on particular topics
+Delfia-1* actuation array is as follows:
+| Index | Content                  | Unit    |
+|-------|--------------------------|---------|
+| 0     | Rear propeller velocity  | RPS     |
+| 1     | Front propeller velocity | RPS     |
+| 2     | Angle rear azimuth       | Radians |
+| 3     | Angle front azimuth      | Radians |
+<br>
 
+For the Tito Neri the actuation array is defined as 
 
-| Vessel Type                                 | Actuation vector interpretation      | Unit |
-|-------------------------------------------|-------------------------|--------------------|
-| Delfia-1* | $[propvel_{1},propvel\_{2},propangle\_{1},propangle\_{2}]$| $rps,rps,radians, radians$|
-| Tito Neri | $[propvel_{aft,ps},propvel\_{aft,sb},proppower\_{bow},propangle\_{aft,ps},propangle\_{aft,sb}]$ | $[rpm,rpm,normalized,radians,radians]$ |
-| Grey Seabax | $[]$ |  $[]$ |
+| Index | Content                              | Unit                             |
+|-------|--------------------------------------|----------------------------------|
+| 0     | Aft portside propeller velocity      | RPM                              |
+| 1     | Aft starboardside propeller velocity | RPM                              |
+| 2     | Bow thruster velocity                | Normalized between -1.0 and +1.0 |
+| 3     | Aft portside azimuth angle           | Radians                          |
+| 4     | Aft portside azimuth angle           | Radians                          |
 
+<br>
+For the Tito Neri the telemetry array is defined as:
+| Index | Content                   | Unit                                 |
+|-------|---------------------------|--------------------------------------|
+| 0     | dcmotor\_P\_reference     | RPM                                  |
+| 1     | dcmotor\_SB\_reference    | RPM                                  |
+| 2     | output\_BOW               | float, normalized on range -1.0:1.0) |
+| 3     | reference\_Angle\_P       | deg                                  |
+| 4     | reference\_Angle\_SB      | deg                                  |
+| 5     | dcmotor\_P\_estimated     | RPM                                  |
+| 6     | dcmotor\_SB\_estimated    | RPM                                  |
+| 7     | dcmotorPID\_P\_Output     | normalized on 8 bit reslution 0-255  |
+| 8     | dcmotorPID\_SB\_Output    | normalized on 8 bit reslution 0-255  |
+| 9    | arduinoInternalClock      | ms                                   |
+| 10    | IMU\_accell\_x            | m/s/s                                |
+| 11    | IMU\_accell\_y            | m/s/s                                |
+| 12    | IMU\_accell\_z            | m/s/s                                |
+| 13    | IMU\_gyro\_x              | rad/s                                |
+| 14    | IMU\_gyro\_y              | rad/s                                |
+| 15    | IMU\_gyro\_z              | rad/s                                |
+| 16    | IMU\_magneto\_x           | uT                                   |
+| 17    | IMU\_magneto\_y           | uT                                   |
+| 18    | IMU\_magneto\_z           | uT                                   |
+| 19    | motor\_ESC\_SignalOut\_P  | 1200-1800Hz                          |
+| 20    | motor\_ESC\_SignalOut\_SB | 1200-1800Hz                          |
 
 ## Coordinate systems
+Various basins are equipped with systems that can find and stream state of rigid bodies, such as the Optitrack systems. This section explains in what coordinate system you can expect data to be streamed on ROS with our default system. 
+
 ### Tiny lab tank
 The coordinate system of the optitrack system on the tiny lab tank is defined as follows:
+
 <p align="center">
-  <img src="[https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png](https://user-images.githubusercontent.com/5917472/225597128-5e988305-7c49-4249-9398-7e5f920c1047.jpg)" />
+  <img src="https://user-images.githubusercontent.com/5917472/225598107-5fb8690f-e711-4db0-9817-42325f938185.jpg" />
 </p>
+
+Note that Z does not point down (as in line with the marine standard NED definition). If this is desired, coordinate system transformation can be done by the user.
+
+### Flume tank
+![image](https://user-images.githubusercontent.com/5917472/225601576-15fd108c-e240-41bf-ba62-5503a229fb05.png)
+
 Note that Z does not point down (as in line with the marine standard NED definition). If this is desired, coordinate system transformation can be done by the user.
 
 ### Small towing tank
-
-### Flume tank
