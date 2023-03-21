@@ -49,11 +49,11 @@ Updated namespaces (we will migrate tho this throughout 2023)
 | /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
 | /vesselID/reference/actuation_prio  |  Override actuation reference, commonly for emergency | std_msgs/Float32MultiArray* | shaft velocities: Rpm    |
 | /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
-| /vesselID/state/poseLocal | Estimated/measured pose w.r.t. local coordinate system    | stdmsgs/pose       | meters,quaternions    |
-| /vesselID/state/posGlobal | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
-| /vesselID/reference/posGlobal | Reference/desired global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
-| /vesselID/state/heading | Estimated/measured yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
-| /vesselID/reference/heading | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
+| /vesselID/state/pose_local | Estimated/measured pose w.r.t. local coordinate system    | stdmsgs/pose       | meters,quaternions    |
+| /vesselID/state/geopos | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
+| /vesselID/reference/geopos | Reference/desired global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
+| /vesselID/state/yaw | Estimated/measured yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
+| /vesselID/reference/yaw | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 
 ### Details on particular topics
 Delfia-1* actuation array is as follows:
