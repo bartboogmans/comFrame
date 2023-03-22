@@ -47,14 +47,19 @@ Old namespace convention: (pre 2023)
 Updated namespaces (we will migrate tho this throughout 2023)
 | Topicname                                 | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
+| /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
 | /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )  |
 | /vesselID/reference/actuation_prio  |  Override actuation reference, commonly for emergency | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )   |
-| /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
-| /vesselID/state/pose_local | Estimated/measured pose w.r.t. local coordinate system    | stdmsgs/pose       | meters,quaternions    |
+| /vesselID/state/pose_local | Estimated/measured pose w.r.t. local coordinate system    | geometry_msgs/Pose       | meters,quaternions    |
+| /vesselID/reference/pose_local | Reference/desired pose w.r.t. local coordinate system    | geometry_msgs/Pose       | meters,quaternions    |
 | /vesselID/state/geopos | Estimated/measured global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
 | /vesselID/reference/geopos | Reference/desired global position | sensor_msgs/NavSatFix      | degrees (latitude, longitude), meters (altitude)   |
 | /vesselID/state/yaw | Estimated/measured yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
 | /vesselID/reference/yaw | Reference/desired yaw | std_msgs/Float32 | radians (clockwise from above w.r.t. north) |
+| /vesselID/state/actuator_forces | current forces/torques applied to ship in CO | geometry_msgs/Wrench | Newton (linear), Newton*meter (angular) |
+| /vesselID/reference/actuator_forces | desired forces/torques applied to ship in CO | geometry_msgs/Wrench | Newton (linear), Newton*meter (angular) |
+| /vesselID/state/velocity | measured/estimated velocities of CO in body fixed coordinate system | geometry_msgs/Twist | m/s (linear), rad/s (angular) |
+| /vesselID/reference/velocity | desired velocities of CO in body fixed coordinate system | geometry_msgs/Twist | m/s (linear), rad/s (angular) |
 
 ### Details on particular topics
 Delfia-1* actuation array is as follows:
