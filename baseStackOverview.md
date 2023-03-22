@@ -33,7 +33,7 @@ The point is that we can now use the previous example and other off-the-shelf co
 
 
 ### A detailed view on the vessel system
-A detailed view on the devices on the vessel show some more complexity on board of the ship, shedding some light on the various software and hardware components on board. You can see that there are a variety of devices on board that run several software modules. There is a lot more going on than just a rigid body and some actuators, although the main functionality for external users is relatively simple: actuation reference goes in, sensor data comes out. Other control components can run on any devices on the ROS network. 
+A detailed view on the devices on the vessel show some more complexity on board of the ship, shedding some light on the various software and hardware components on board. You can see that there are a variety of devices on board that run several software modules. There is a lot more going on than just a rigid body and some actuators, although the main functionality for external users is relatively simple: actuation reference goes in, sensor data comes out. Other control components can run on any devices on the ROS network. <br> <br>
 ![base_titoneri_setup drawio (1)](https://user-images.githubusercontent.com/5917472/225702533-7e9da585-7c21-45fe-a4b3-fe410db8400e.png)
 
 ## Other available modules
