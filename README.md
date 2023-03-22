@@ -47,7 +47,7 @@ Old namespace convention: (pre 2023)
 Updated namespaces (we will migrate tho this throughout 2023)
 | Topicname                                 | Description             | Messagetype        | Default unit(s)                                        |
 |-------------------------------------------|-------------------------|--------------------|--------------------------------------------------------|
-| /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | identical to /vesselID/u_ref |
+| /vesselID/state/actuation | Measured actuator state | std_msgs/Float32MultiArray  | (see [below](#details-on-particular-topics) |
 | /vesselID/reference/actuation  |  Reference/desired Actuator state     | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )  |
 | /vesselID/reference/actuation_prio  |  Override actuation reference, commonly for emergency | std_msgs/Float32MultiArray* | (see [below](#details-on-particular-topics) )   |
 | /vesselID/state/pose_local | Estimated/measured pose w.r.t. local coordinate system    | geometry_msgs/Pose       | meters,quaternions    |
