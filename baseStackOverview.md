@@ -23,8 +23,13 @@ We commonly use the Robotic Operating System (ROS) to facilitate communication b
 ## An example of a simple Tito Neri waypoint following stack
 ### High level system view:
 Here you can see an example of a simple setup that allows a ship to automatically follow a user defined set of waypoints. Waypoints are configured in the high level waypoint manager, that tracks whether the ship should aim at a next waypoint and streams a reference heading for the vessel. The heading control module converts reference and measured heading into actuator reference. The vessel has it's own low level control feedback loop of the actuators, imposing a force on the hull of the ship. The vessel has heading and geo position sensors providing a measured state for the waypoint manager and heading controller. 
-In this case the connections between the 'vessel system', ' waypoint module' and 'heading controller' would be facilitated by ROS. 
-![wpfollowingexample1](https://user-images.githubusercontent.com/5917472/225710349-5d6e1443-296b-4d88-86a1-1541c927d043.png)
+In this case the connections between the 'vessel system', ' waypoint module' and 'heading controller' would be facilitated by ROS. <br> <br>
+![wp_following vel_control schematic digipact 1 drawio (1)](https://user-images.githubusercontent.com/5917472/226966655-45b8debe-33da-4ca1-979a-b35bf5596c4a.svg)
+
+
+### A variation
+The point is that we can now use the previous example and other off-the-shelf components to make variations of the beforementioned control system. We can mix and match components to reach a desired behaviour / complexity matching a certain project/usecase. Below is an example where the system above has been adapted with besides heading control (with fixed motor rpm) to have velocity control based on a rectangular wave reference. <br> <br>
+![wp_following vel_control schematic digipact 1 drawio](https://user-images.githubusercontent.com/5917472/226966073-ab6abd19-5175-4e65-82a9-91f2a4782680.svg)
 
 
 ### A detailed view on the vessel system
