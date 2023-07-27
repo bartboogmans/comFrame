@@ -3,8 +3,7 @@ This section provides a comprehensive description of the various maritime roboti
 
 The benefit of using the modules developed by RAS engineers is that these elements have usually been developed up to a reasonable state of reliability, which becomes extra desirable when there are numerous single-points-of-failure. Leveraging these well-tested modules allows you to focus more on your goal. Utilizing proven components you can devote more time and effort to pushing your own project goals, while contributing by maturing the software through making small improvements, bug reports or feedback. 
 
-If you intend to develop a control architecture utilizing any of these modules, we highly recommend collaborating with the skilled engineers of RAS to ensure a seamless transition and successful implementation. Their expertise and experience will undoubtedly enhance your project's potential and lead to innovative advancements in the field of maritime robotics.
-
+If you intend to develop a control architecture utilizing any of these modules, we highly recommend sparring with the engineers of RAS when you want to start designing a control architecture.
 
 ## Utilities
 
