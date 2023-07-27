@@ -1,5 +1,10 @@
 # An overview of available RAS modules
-This page describes available tools that are available to do maritime robotics experiments. This serves as an initial point for collaborators to orientate themselves on available tools. When you plan to transition towards making a control architecture with some of the described modules, we recommend doing so together with engineers in RAS. 
+This section provides a comprehensive description of the various maritime robotics experiment tools at your disposal. It serves as a starting point for collaborators to familiarize themselves with the available resources.
+
+The benefit of using the modules developed by RAS engineers is that these elements have usually been developed up to a reasonable state of reliability, which becomes extra desirable when there are numerous single-points-of-failure. Leveraging these well-tested modules allows you to focus more on your goal. Utilizing proven components you can devote more time and effort to pushing your own project goals, while contributing by maturing the software through making small improvements, bug reports or feedback. 
+
+If you intend to develop a control architecture utilizing any of these modules, we highly recommend collaborating with the skilled engineers of RAS to ensure a seamless transition and successful implementation. Their expertise and experience will undoubtedly enhance your project's potential and lead to innovative advancements in the field of maritime robotics.
+
 
 ## Utilities
 
