@@ -1,4 +1,4 @@
-# Researchlab Autonomous Shipping Delft - Internal standards
+# Researchlab Autonomous Shipping Delft - Communication Framework
 <p align="center">
   <img src="https://user-images.githubusercontent.com/5917472/225625088-a7cb7d74-f594-4aed-bfc7-555cc0f2d2e4.png" />
 </p>
@@ -6,10 +6,32 @@
 
 These guidelines are aimed to help people get access to RAS systems and encourage alignment of interfaces between projects/modules. Anyone can choose freely to ignore these guidelines as they see fit, but it is encouraged to follow this standard to enhance component compatibility.
 
-For descriptions of common control setups, [see here](baseStackOverview.md)
+See also: <br>
+- [Descriptions of common control setups](baseStackOverview.md)
+- [List of available modules](https://github.com/RAS-Delft/comFrame/blob/Repostory-overview-update/module_overview.md)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/5917472/225585663-8054c647-83d7-4b90-abb3-9ec3994ab30f.png"/>
 </p>
+
+## Components
+we offer a variety of repositories that cater to researchers and projects. Our design philosophy centers around creating reusable software components for future projects. To ensure ease of use for upcoming projects, we organize these software components into different topics. Our repositories consist of two main types: basic building blocks and those designed for specific use cases. The distinction between the two ensures clarity and easy identification of the functionalities.
+
+### Basic Building Blocks:
+These are common software modules doing basic operations fundamental for reliable vessel operation. While they may not be of direct interest to regular researchers, they play a crucial role in the smooth functioning of the system. Examples of such modules include:
+- Bridges between sensors and ROS (Robot Operating System)
+- Low level actuator controls
+- VPN services for secure communication
+- Remote control abilities
+- Ship diagnostics for monitoring and maintenance purposes
+
+### Specific Use Case Components:
+Some software components are tailored for specific subjects or applications. These components are bundled together in dedicated packages for easy access and usage. Examples of such packages include:
+- Waypoint following demonstration for path planning and navigation
+- Formation control system 1, which includes heading and distance keeping approaches (ref), ideal for formations of vessels
+- MT44000 Mechatronics course software, catering to the specific needs of the Mechatronics course.
+
+An overview of available modules can be found [here](https://github.com/RAS-Delft/comFrame/blob/Repostory-overview-update/module_overview.md)
 
 ## Namespaces 
 The table below shows identifiers are used for our vessels. These names are commonly used when something needs to refer to a specific ship, such as ROS topics. 
