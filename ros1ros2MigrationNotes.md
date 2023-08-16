@@ -33,10 +33,24 @@ Migration is envisioned in the following steps
 
 We should also check if ros2 communication performs adequately for our purposes (as Janusz mentioned he found limitations there that need investigation)
 
+Components to transfer in 2.0 are as follows.
+
+|    | Module name                          | Migrated | Assigned to | Initial location                                                                                                               |
+|----|--------------------------------------|----------|-------------|--------------------------------------------------------------------------------------------------------------------------------|
+| 1  | Nausbot simulator                    | Yes      | Bart        | https://github.com/bartboogmans/Nausbot/tree/ros2                                                                              |
+| 2  | Ras web diagnostics                  | No       | Casper      | https://github.com/RAS-Delft/web-diagnostics                                                                                   |
+| 3  | Joystick bridge                      | No       | Bart        | https://github.com/RAS-Delft/RAS_General/blob/main/matlab/GUI%20%26%20control%20subsystems/Joystick_app_directJoyControl.mlapp |
+| 4  | Heading controller                   | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main/src/usv_surge_vel_contr/scripts                           |
+| 5  | Emlid bridge                         | ?        | Casper      | https://github.com/RAS-Delft/ros_optitrack_bridge                                                                              |
+| 6  | ROS_arduino_bridge                   | Yes      | Casper      | https://github.com/RAS-Delft/RAS_TitoNeri/tree/main/ras_low_level_bridge                                                       |
+| 7  | Velocity differentiator              | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main                                                           |
+| 8  | 2dof control effort allocator nomoto | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main                                                           |
+| 9  | geopos/heading differentiator        | No       | Bart        | https://github.com/RAS-Delft/USV_geopos_heading_differentiator                                                                 |
+| 10 | Formation control demo               | No       | Bart        | https://github.com/RAS-Delft/USV_formation_control_1/tree/main/src/usv_formation_control_1/scripts                             |
+
 ## Versioning
 We refer to the RAS 1.0 stack to the functionality that our system has today working on ros1, having various automated control modules and a formation control demo.
 We refer to the RAS 2.0 stack to the first functional system with all above described features working over ros2 in reorganised repositories.
-
 
 ## Documentation
 All changes should be incorporated on the RAS software overview. (e.g. https://github.com/RAS-Delft/comFrame or some other general location or format (such as caspers mdbook))
@@ -46,3 +60,12 @@ Before the 2.0 version is fully operational, we can rely on 1.0 to facilitate de
 For our users, no conceptual usage will differ, besides the ros version that they should be instructed to work with. 
 
 Close off should reflect lessons learnt and future steps
+
+## Further steps
+These are some ideas to follow up afterwards:
+- port mechatronics course to ros2?
+- Port towing+ flume tank bridge to ros2
+- Make DP+nomoto controlled combined auto switching framework?
+- from above: involve standardized pathplanning
+- from above: Involve (dynamic) collisionavoidance
+- Boids fleet swarming
