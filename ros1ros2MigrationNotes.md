@@ -39,7 +39,7 @@ Components to transfer in 2.0 are as follows.
 |----|--------------------------------------|----------|-------------|--------------------------------------------------------------------------------------------------------------------------------|
 | 1  | Nausbot simulator                    | Yes      | Bart        | https://github.com/bartboogmans/Nausbot/tree/ros2                                                                              |
 | 2  | Ras web diagnostics                  | No       | Casper      | https://github.com/RAS-Delft/web-diagnostics                                                                                   |
-| 3  | Joystick bridge                      | No       | Bart        | https://github.com/RAS-Delft/RAS_General/blob/main/matlab/GUI%20%26%20control%20subsystems/Joystick_app_directJoyControl.mlapp |
+| 3  | Joystick bridge                      | Yes      | Bart        | https://github.com/RAS-Delft/RAS_General/blob/main/matlab/GUI%20%26%20control%20subsystems/Joystick_app_directJoyControl.mlapp |
 | 4  | Heading controller                   | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main/src/usv_surge_vel_contr/scripts                           |
 | 5  | Emlid reach bridge                   | ?        | Casper      | https://github.com/RAS-Delft/reach_bridge                                                                              |
 | 6  | ROS_arduino_bridge                   | Yes      | Casper      | https://github.com/RAS-Delft/RAS_TitoNeri/tree/main/ras_low_level_bridge                                                       |
