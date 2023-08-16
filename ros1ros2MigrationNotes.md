@@ -41,7 +41,7 @@ Components to transfer in 2.0 are as follows.
 | 2  | Ras web diagnostics                  | No       | Casper      | https://github.com/RAS-Delft/web-diagnostics                                                                                   |
 | 3  | Joystick bridge                      | No       | Bart        | https://github.com/RAS-Delft/RAS_General/blob/main/matlab/GUI%20%26%20control%20subsystems/Joystick_app_directJoyControl.mlapp |
 | 4  | Heading controller                   | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main/src/usv_surge_vel_contr/scripts                           |
-| 5  | Emlid bridge                         | ?        | Casper      | https://github.com/RAS-Delft/ros_optitrack_bridge                                                                              |
+| 5  | Emlid reach bridge                   | ?        | Casper      | https://github.com/RAS-Delft/reach_bridge                                                                              |
 | 6  | ROS_arduino_bridge                   | Yes      | Casper      | https://github.com/RAS-Delft/RAS_TitoNeri/tree/main/ras_low_level_bridge                                                       |
 | 7  | Velocity differentiator              | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main                                                           |
 | 8  | 2dof control effort allocator nomoto | No       | Bart        | https://github.com/RAS-Delft/USV_surge_velocity_controller/tree/main                                                           |
@@ -63,8 +63,8 @@ Close off should reflect lessons learnt and future steps
 
 ## Further steps
 These are some ideas to follow up afterwards:
-- port mechatronics course to ros2?
-- Port towing+ flume tank bridge to ros2
+- port [mechatronics course](https://github.com/RAS-Delft/MT44000) to ros2?
+- Port [towing+ flume tank bridge](https://github.com/RAS-Delft/ros_optitrack_bridge) to ros2
 - Make DP+nomoto controlled combined auto switching framework?
 - from above: involve standardized pathplanning
 - from above: Involve (dynamic) collisionavoidance
